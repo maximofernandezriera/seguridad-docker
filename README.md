@@ -1,8 +1,8 @@
 # seguridad-docker
 
-Seguid esta guía y replicad los pasos.
+Seguid esta guía y replicad los pasos para finalmente resolver el reto propuesto.
 
-## Seguridad host
+## PARTE A. Seguridad host
 
 <blockquote class='task'>
 <i class='fa fa-check'> </i><strong> Práctica 1</strong></blockquote>
@@ -20,7 +20,7 @@ y recargar los permisos (o reiniciar sesión)
 
 `newgrp docker`
 
-## Seguridad en el demonio
+## PARTE B. Seguridad en el demonio
 
 El demonio corre como superusuario, así que debemos impedir que los usuarios puedan tocar la configuración  y el socket no deberían poder verlo.
 
@@ -41,7 +41,7 @@ Ejemplo de archivo `daemon.json`
 
 Otro archivo es `key.json` y ningún usuario que no sea root no debería acceder porque ahí se almacena en base64 la key para conectarse por TLS (por ejemplo con el Registry).
 
-## Seguridad en contenedores
+## PARTE C. Seguridad en contenedores
 
 Son uno de los ejes principales del hardening pues donde hay más configuraciones afectadas.
 
